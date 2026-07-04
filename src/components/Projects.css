@@ -59,9 +59,11 @@
 
 .portfolio-label{
 
-    color:#5fa8ff;
+    color: pink;
 
     letter-spacing:3px;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 
     font-size:.95rem;
 

@@ -19,12 +19,8 @@ function Projects({ setActiveSection }) {
 
       <div className="portfolio-header">
 
-        <p className="portfolio-label">
-          ENGINEERING PORTFOLIO
-        </p>
-
-        <h1>
-          Engineering Design Portfolio
+        <h1 className="portfolio-label">
+          PROJECTS
         </h1>
 
         <p className="portfolio-description">
@@ -46,10 +42,6 @@ function Projects({ setActiveSection }) {
 
         <a href="#academic">
           Academic Projects
-        </a>
-
-        <a href="#professional">
-          Professional Work
         </a>
 
       </div>
@@ -131,7 +123,7 @@ function Projects({ setActiveSection }) {
 
       {/* Professional */}
 
-      <section
+      {/* <section
         id="professional"
         className="project-category"
       >
@@ -179,7 +171,7 @@ function Projects({ setActiveSection }) {
 
         </div>
 
-      </section>
+      </section> */}
 
     </section>
   );
