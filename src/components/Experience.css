@@ -1,0 +1,175 @@
+.experience-section{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:60px 0 100px;
+}
+
+.experience-section h1{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:4rem;
+
+    margin-bottom:60px;
+}
+
+.experience-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+    gap:40px;
+}
+
+.experience-card{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(95,168,255,.15);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:500px;
+}
+
+.experience-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#5fa8ff;
+
+    box-shadow:0 15px 35px rgba(95,168,255,.20);
+}
+
+.exp-icon{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+}
+
+.experience-card h2{
+
+    color:white;
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+}
+
+.experience-card h3{
+
+    color:#5fa8ff;
+
+    font-size:1.25rem;
+
+    margin-bottom:15px;
+}
+
+.duration{
+
+    display:inline-block;
+
+    width:fit-content;
+
+    background:rgba(95,168,255,.12);
+
+    color:#76b6ff;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+}
+
+.responsibilities{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+}
+
+.responsibilities li{
+
+    color:#d4dce8;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+    position:relative;
+
+    padding-left:30px;
+}
+
+.responsibilities li::before{
+
+    content:"✓";
+
+    color:#5fa8ff;
+
+    position:absolute;
+
+    left:0;
+
+    font-weight:bold;
+}
+
+/* Back Button */
+
+.back-btn{
+
+    background:#5fa8ff;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    margin-bottom:50px;
+
+    font-size:1rem;
+
+    font-weight:600;
+}
+
+.back-btn:hover{
+
+    background:#77b8ff;
+}
+
+@media(max-width:900px){
+
+    .experience-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}

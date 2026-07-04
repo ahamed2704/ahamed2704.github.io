@@ -1,0 +1,335 @@
+/* ===================================================
+   PROJECT CARD
+=================================================== */
+
+.project-card{
+
+    margin-bottom:45px;
+
+    border:1px solid rgba(95,168,255,.15);
+
+    border-radius:20px;
+
+    background:rgba(18,27,47,.85);
+
+    backdrop-filter:blur(14px);
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+}
+
+.project-card:hover{
+
+    border-color:#5fa8ff;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 45px rgba(95,168,255,.12);
+}
+
+/* ===================================================
+   HEADER
+=================================================== */
+
+.project-header{
+
+    padding:28px 35px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.project-header:hover{
+
+    background:rgba(95,168,255,.05);
+}
+
+.project-header h2{
+
+    color:white;
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+}
+
+.project-click{
+
+    color:#5fa8ff;
+
+    font-weight:600;
+
+    font-size:.95rem;
+}
+
+/* ===================================================
+   BODY
+=================================================== */
+
+.project-body{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:35px;
+
+    animation:fade .35s ease;
+}
+
+/* ===================================================
+   IMAGE
+=================================================== */
+
+.project-image{
+
+    width:100%;
+
+    border-radius:18px;
+
+    margin-bottom:40px;
+
+    border:1px solid rgba(95,168,255,.15);
+
+    transition:.35s;
+}
+
+.project-image:hover{
+
+    transform:scale(1.01);
+}
+
+/* ===================================================
+   SPECIFICATION
+=================================================== */
+
+.specification{
+
+    margin-bottom:50px;
+
+    border:1px solid rgba(95,168,255,.15);
+
+    border-radius:18px;
+
+    overflow:hidden;
+}
+
+.specification h3{
+
+    margin:0;
+
+    padding:18px 25px;
+
+    background:#1d2b48;
+
+    color:#5fa8ff;
+
+    letter-spacing:1px;
+}
+
+.spec-grid{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.spec-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 25px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.spec-row:last-child{
+
+    border-bottom:none;
+}
+
+.spec-row span{
+
+    color:#9cb2d6;
+
+    font-weight:500;
+}
+
+.spec-row strong{
+
+    color:white;
+
+    font-weight:600;
+}
+
+/* ===================================================
+   SECTIONS
+=================================================== */
+
+.project-body section{
+
+    margin-bottom:45px;
+}
+
+.project-body h3{
+
+    color:#5fa8ff;
+
+    margin-bottom:18px;
+
+    font-size:1.25rem;
+
+    border-left:4px solid #5fa8ff;
+
+    padding-left:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+.project-body p{
+
+    color:#d4dceb;
+
+    line-height:1.9;
+}
+
+/* ===================================================
+   LISTS
+=================================================== */
+
+.project-body ul{
+
+    list-style:none;
+
+    padding:0;
+}
+
+.project-body li{
+
+    position:relative;
+
+    padding-left:28px;
+
+    margin-bottom:14px;
+
+    color:#d4dceb;
+
+    line-height:1.8;
+}
+
+.project-body li::before{
+
+    content:"▸";
+
+    position:absolute;
+
+    left:0;
+
+    color:#5fa8ff;
+
+    font-size:1rem;
+}
+
+/* ===================================================
+   TAGS
+=================================================== */
+
+.tag-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+}
+
+.tag{
+
+    background:#223250;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(95,168,255,.12);
+
+    transition:.3s;
+
+    font-size:.92rem;
+}
+
+.tag:hover{
+
+    background:#5fa8ff;
+
+    transform:translateY(-2px);
+}
+
+/* ===================================================
+   ANIMATION
+=================================================== */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-15px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media(max-width:900px){
+
+    .project-header{
+
+        padding:24px;
+    }
+
+    .project-header h2{
+
+        font-size:1.5rem;
+    }
+
+    .project-body{
+
+        padding:24px;
+    }
+
+    .spec-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+    }
+
+}

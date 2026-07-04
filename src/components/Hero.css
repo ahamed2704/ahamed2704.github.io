@@ -1,0 +1,117 @@
+.hero {
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background: transparent;
+}
+
+.hero-content {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    font-style: oblique;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero-wing {
+
+    font-size: 3rem;
+
+    color: #5fa8ff;
+
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 20px rgba(95,168,255,.5);
+}
+
+.hero h1 {
+
+    font-size: 5rem;
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #5fa8ff
+    );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 40px rgba(95,168,255,.25);
+}
+
+.hero h2 {
+
+    color: #5fa8ff;
+
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 15px rgba(95,168,255,.35);
+}
+
+.hero p {
+
+    color: #d5dbe8;
+
+    font-size: 1.1rem;
+
+    letter-spacing: 1px;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    text-shadow: 0 0 10px rgba(0,0,0,.6);
+}
+
+@media (max-width:768px){
+
+    .hero{
+
+        padding:50px 20px;
+
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero h2{
+
+        font-size:1.5rem;
+
+    }
+
+    .hero p{
+
+        font-size:1rem;
+
+    }
+
+}

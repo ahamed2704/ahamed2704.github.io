@@ -1,0 +1,46 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    margin:0;
+
+    font-family:Arial,sans-serif;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    background-image:url("/backgrounds/space.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+}
+
+/* Remove default Vite styling */
+
+#root{
+
+    min-height:100vh;
+
+    background:transparent;
+
+}

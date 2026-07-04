@@ -1,0 +1,284 @@
+/* ===========================================
+   ENGINEERING PORTFOLIO
+=========================================== */
+
+.projects-page{
+
+    width:90%;
+    max-width:1450px;
+
+    margin:auto;
+
+    padding:60px 0 120px;
+}
+
+/* ===========================================
+   BACK BUTTON
+=========================================== */
+
+.back-btn{
+
+    background:#5fa8ff;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    margin-bottom:60px;
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+
+    background:#7ab8ff;
+
+    transform:translateY(-2px);
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.portfolio-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+}
+
+.portfolio-label{
+
+    color:#5fa8ff;
+
+    letter-spacing:3px;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+}
+
+.portfolio-header h1{
+
+    color:white;
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+}
+
+.portfolio-description{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#c9d3e3;
+
+    line-height:2;
+
+    font-size:1.08rem;
+}
+
+/* ===========================================
+   NAVIGATION
+=========================================== */
+
+.portfolio-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-bottom:90px;
+
+    flex-wrap:wrap;
+}
+
+.portfolio-navigation a{
+
+    text-decoration:none;
+
+    color:#dce5f4;
+
+    padding:15px 32px;
+
+    border:1px solid rgba(95,168,255,.18);
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.03);
+
+    transition:.3s;
+
+    font-weight:600;
+}
+
+.portfolio-navigation a:hover{
+
+    background:#5fa8ff;
+
+    color:white;
+
+    transform:translateY(-3px);
+}
+
+/* ===========================================
+   CATEGORY
+=========================================== */
+
+.project-category{
+
+    margin-bottom:120px;
+}
+
+.category-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.category-header h2{
+
+    color:white;
+
+    font-size:2.3rem;
+}
+
+.category-header span{
+
+    color:#5fa8ff;
+
+    border:1px solid rgba(95,168,255,.25);
+
+    padding:10px 18px;
+
+    border-radius:25px;
+
+    font-weight:600;
+}
+
+.category-description{
+
+    color:#c5d1e1;
+
+    margin-bottom:45px;
+
+    line-height:1.9;
+
+    max-width:900px;
+}
+
+/* ===========================================
+   PROFESSIONAL SECTION
+=========================================== */
+
+.professional-box{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(95,168,255,.15);
+
+    border-radius:22px;
+
+    padding:45px;
+
+    transition:.3s;
+}
+
+.professional-box:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#5fa8ff;
+
+    box-shadow:0 15px 40px rgba(95,168,255,.12);
+}
+
+.professional-box h3{
+
+    color:white;
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+}
+
+.professional-box h4{
+
+    color:#5fa8ff;
+
+    margin-bottom:25px;
+}
+
+.professional-box p{
+
+    color:#d6ddeb;
+
+    line-height:2;
+}
+
+.status{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:10px 22px;
+
+    background:#5fa8ff;
+
+    color:white;
+
+    border-radius:30px;
+
+    font-weight:600;
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:900px){
+
+    .portfolio-header h1{
+
+        font-size:2.8rem;
+    }
+
+    .category-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+    }
+
+    .portfolio-navigation{
+
+        flex-direction:column;
+
+        align-items:center;
+    }
+
+}

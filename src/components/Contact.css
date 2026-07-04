@@ -1,0 +1,42 @@
+.contact-page {
+  width: 90%;
+  max-width: 800px;
+
+  margin: auto;
+
+  padding-bottom: 100px;
+}
+
+.contact-title {
+  text-align: center;
+
+  font-size: 3rem;
+
+  margin-bottom: 50px;
+}
+
+.contact-card {
+  padding: 40px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  text-align: center;
+}
+
+.contact-card h2 {
+  margin-bottom: 30px;
+
+  color: #5fa8ff;
+}
+
+.contact-item {
+  margin-bottom: 20px;
+
+  font-size: 1.1rem;
+}

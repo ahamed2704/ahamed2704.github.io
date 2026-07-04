@@ -1,0 +1,89 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    /* CHANGE ONLY THIS LINE TO CHANGE BACKGROUND */
+
+    background-image:url("/backgrounds/Gargantua.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+}
+
+/* Dark overlay so text remains readable */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(2,10,25,.55);
+
+    z-index:-1;
+
+}
+
+.app{
+
+    min-height:100vh;
+
+    background:transparent;
+}
+
+.back-btn{
+
+    background:#5fa8ff;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    margin-bottom:30px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+
+    background:#7ab8ff;
+
+    transform:translateY(-2px);
+
+}

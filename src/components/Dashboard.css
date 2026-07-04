@@ -1,0 +1,240 @@
+.dashboard{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    justify-items:center;
+
+    padding-bottom:100px;
+}
+
+/* =========================================
+   GLASS CARD
+========================================= */
+
+.tech-card{
+
+    width:320px;
+
+    height:420px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    border-radius:28px;
+
+    /* MUCH LIGHTER GLASS */
+
+    background:rgba(255,255,255,.001);
+
+    backdrop-filter:blur(1px);
+
+    -webkit-backdrop-filter:blur(1px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.12);
+
+    transition:.35s ease;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+/* Reflection */
+
+.tech-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    left:-80px;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    filter:blur(40px);
+
+    pointer-events:none;
+}
+
+/* Hover */
+
+.tech-card:hover{
+
+    transform:
+        translateY(-12px)
+        scale(1.02);
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(6px);
+
+    -webkit-backdrop-filter:blur(6px);
+
+    border:1px solid rgba(95,168,255,.45);
+
+    box-shadow:
+        0 18px 35px rgba(95,168,255,.22);
+}
+
+/* Number */
+
+.card-id{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:#74b3ff;
+
+    z-index:3;
+}
+
+.big-number{
+
+    position:absolute;
+
+    top:80px;
+
+    font-size:8rem;
+
+    font-weight:800;
+
+    color:rgba(255,255,255,.04);
+
+    user-select:none;
+
+    z-index:1;
+}
+
+/* Icon */
+
+.card-icon{
+
+    font-size:4rem;
+
+    color:#74b3ff;
+
+    margin-bottom:25px;
+
+    z-index:3;
+
+    transition:.35s;
+}
+
+.tech-card:hover .card-icon{
+
+    transform:scale(1.08);
+}
+
+/* Title */
+
+.tech-card h3{
+
+    color:white;
+
+    font-size:2rem;
+
+    margin-bottom:18px;
+
+    z-index:3;
+
+    text-shadow:0 2px 6px rgba(0,0,0,.35);
+}
+
+/* Subtitle */
+
+.tech-card p{
+
+    color:#edf4ff;
+
+    line-height:1.6;
+
+    padding:0 25px;
+
+    z-index:3;
+
+    text-shadow:0 1px 4px rgba(0,0,0,.35);
+}
+
+/* Border */
+
+.tech-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    pointer-events:none;
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+    .dashboard{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .dashboard{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .tech-card{
+
+        width:300px;
+
+        height:400px;
+
+    }
+
+}
