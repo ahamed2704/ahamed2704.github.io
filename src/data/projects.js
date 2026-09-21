@@ -1,148 +1,208 @@
 const projects = {
   mechanical: [
-    {
-      id: 1,
+  {
+    id: 1,
 
-      title: "Compact Folding Workbench",
+    title: "Scooter",
 
-      image: "/projects/workbench.png",
+    image: "/projects/scooter.png",
 
-      specification: {
-        software: "CATIA V5",
-        projectType: "Mechanical Product Design",
-        designApproach: "Parametric CAD Modelling",
-        status: "Completed"
-      },
-
-      overview:
-        "Designed and developed a compact folding workbench using CATIA V5 with emphasis on structural stability, manufacturability, and efficient space utilization. The project involved complete 3D modelling, assembly creation, motion validation, and engineering drawing preparation.",
-
-      workbenches: [
-        "Part Design",
-        "Assembly Design",
-        "Drafting"
-      ],
-
-      designFeatures: [
-        "Complete 3D Part Modelling",
-        "Assembly Constraints",
-        "Folding Mechanism",
-        "Locking Arrangement",
-        "Structural Frame",
-        "Motion Clearance"
-      ],
-
-      designConsiderations: [
-        "Structural Stability",
-        "Manufacturability",
-        "Fastener Placement",
-        "Assembly Sequence",
-        "Ease of Fabrication"
-      ],
-
-      skills: [
-        "Product Design",
-        "3D Modelling",
-        "Mechanical Assembly",
-        "Engineering Drawings"
-      ]
+    specification: {
+      software: "CATIA V5",
+      projectType: "Mechanical Product Design",
+      designApproach: "Parametric CAD Modelling",
+      status: "Completed"
     },
 
-    {
-      id: 2,
+    overview:
+      "Designed a complete scooter mechanical product using CATIA V5, including detailed 3D modelling and assembly development. The project focused on structural layout, component fitment, functional requirements, and mechanical motion validation.",
 
-      title: "Solar Structure Mounting",
+    workbenches: [
+      "Part Design",
+      "Assembly Design",
+      "DMU Kinematics"
+    ],
 
-      image: "/projects/solar.png",
+    designFeatures: [
+      "Complete Scooter 3D Modelling",
+      "Mechanical Assembly Development",
+      "Structural Frame Design",
+      "Steering Mechanism",
+      "Wheel Assembly",
+      "Modular CAD Structure"
+    ],
 
-      specification: {
-        software: "CATIA V5",
-        projectType: "Structural Design",
-        designApproach: "Parametric CAD Modelling",
-        status: "Completed"
-      },
+    designConsiderations: [
+      "Space Utilization",
+      "Structural Stiffness",
+      "Component Fitment",
+      "Functional Requirements",
+      "Dimensional Relationships",
+      "Assembly Interfaces"
+    ],
 
-      overview:
-        "Designed a solar panel mounting structure considering structural rigidity, manufacturability, ease of fabrication, and load distribution. The model demonstrates practical structural design using CATIA V5.",
+    analysisAndValidation: [
+      "Assembly Constraints",
+      "DMU Kinematics",
+      "Steering Motion Evaluation",
+      "Wheel Motion Evaluation",
+      "Component Interface Validation",
+      "Assembly Functionality"
+    ],
 
-      workbenches: [
-        "Part Design",
-        "Generative Shape Design"
-      ],
+    skills: [
+      "Mechanical Product Design",
+      "CATIA V5",
+      "3D Modelling",
+      "Assembly Design",
+      "DMU Kinematics",
+      "Product Development"
+    ]
+  },
 
-      designFeatures: [
-        "Support Frame",
-        "Structural Members",
-        "Surface Modelling",
-        "Mounting Geometry",
-        "Parametric Design"
-      ],
+  {
+    id: 2,
 
-      designConsiderations: [
-        "Load Distribution",
-        "Inclination Angle",
-        "Structural Strength",
-        "Fabrication Simplicity"
-      ],
+    title: "Compact Folding Workbench",
 
-      skills: [
-        "Mechanical Design",
-        "Surface Modelling",
-        "Structural Design",
-        "CAD Modelling"
-      ]
+    image: "/projects/workbench.png",
+
+    specification: {
+      software: "CATIA V5",
+      projectType: "Mechanical Product Design",
+      designApproach: "Parametric CAD Modelling",
+      status: "Completed"
     },
 
-    {
-      id: 3,
+    overview:
+      "Designed and developed a compact folding workbench using CATIA V5 with emphasis on structural stability, manufacturability, and efficient space utilization. The project involved complete 3D modelling, assembly creation, motion validation, and engineering drawing preparation.",
 
-      title: "Industrial Material Handling Trolley",
+    workbenches: [
+      "Part Design",
+      "Assembly Design",
+      "Drafting"
+    ],
 
-      image: "/projects/trolley.png",
+    designFeatures: [
+      "Complete 3D Part Modelling",
+      "Assembly Constraints",
+      "Folding Mechanism",
+      "Locking Arrangement",
+      "Structural Frame",
+      "Motion Clearance"
+    ],
 
-      specification: {
-        software: "CATIA V5",
-        projectType: "Mechanical Product Design",
-        designApproach: "Assembly-Based Design",
-        status: "Completed"
-      },
+    designConsiderations: [
+      "Structural Stability",
+      "Manufacturability",
+      "Fastener Placement",
+      "Assembly Sequence",
+      "Ease of Fabrication"
+    ],
 
-      overview:
-        "Designed a material handling trolley intended for industrial applications with emphasis on stability, wheel placement, ergonomic handling, manufacturability, and complete assembly modelling.",
+    skills: [
+      "Product Design",
+      "3D Modelling",
+      "Mechanical Assembly",
+      "Engineering Drawings"
+    ]
+  },
 
-      workbenches: [
-        "Part Design",
-        "Assembly Design",
-        "Drafting"
-      ],
+  {
+    id: 3,
 
-      designFeatures: [
-        "Complete Assembly",
-        "Wheel Mounting",
-        "Handle Design",
-        "Fastener Arrangement",
-        "Load Platform"
-      ],
+    title: "Solar Structure Mounting",
 
-      designConsiderations: [
-        "Load Carrying Capacity",
-        "Stability",
-        "Ergonomics",
-        "Ease of Manufacturing"
-      ],
+    image: "/projects/solar.png",
 
-      skills: [
-        "Mechanical Assembly",
-        "Engineering Drawings",
-        "Product Design",
-        "CAD Modelling"
-      ]
-    }
-  ],
+    specification: {
+      software: "CATIA V5",
+      projectType: "Structural Design",
+      designApproach: "Parametric CAD Modelling",
+      status: "Completed"
+    },
+
+    overview:
+      "Designed a solar panel mounting structure considering structural rigidity, manufacturability, ease of fabrication, and load distribution. The model demonstrates practical structural design using CATIA V5.",
+
+    workbenches: [
+      "Part Design",
+      "Generative Shape Design"
+    ],
+
+    designFeatures: [
+      "Support Frame",
+      "Structural Members",
+      "Surface Modelling",
+      "Mounting Geometry",
+      "Parametric Design"
+    ],
+
+    designConsiderations: [
+      "Load Distribution",
+      "Inclination Angle",
+      "Structural Strength",
+      "Fabrication Simplicity"
+    ],
+
+    skills: [
+      "Mechanical Design",
+      "Surface Modelling",
+      "Structural Design",
+      "CAD Modelling"
+    ]
+  },
+
+  {
+    id: 4,
+
+    title: "Industrial Material Handling Trolley",
+
+    image: "/projects/trolley.png",
+
+    specification: {
+      software: "CATIA V5",
+      projectType: "Mechanical Product Design",
+      designApproach: "Assembly-Based Design",
+      status: "Completed"
+    },
+
+    overview:
+      "Designed a material handling trolley intended for industrial applications with emphasis on stability, wheel placement, ergonomic handling, manufacturability, and complete assembly modelling.",
+
+    workbenches: [
+      "Part Design",
+      "Assembly Design",
+      "Drafting"
+    ],
+
+    designFeatures: [
+      "Complete Assembly",
+      "Wheel Mounting",
+      "Handle Design",
+      "Fastener Arrangement",
+      "Load Platform"
+    ],
+
+    designConsiderations: [
+      "Load Carrying Capacity",
+      "Stability",
+      "Ergonomics",
+      "Ease of Manufacturing"
+    ],
+
+    skills: [
+      "Mechanical Assembly",
+      "Engineering Drawings",
+      "Product Design",
+      "CAD Modelling"
+    ]
+  }
+],
 
   academic: [
     {
-      id: 4,
+      id: 5,
 
       title: "Optimization of Turning Process Using Nano Cutting Fluids",
 
@@ -168,7 +228,7 @@ const projects = {
     },
 
     {
-      id: 5,
+      id: 6,
 
       title: "Performance Analysis of Vapor Compression Refrigeration System (R-600a)",
 
@@ -192,21 +252,6 @@ const projects = {
         "Evaluated refrigeration system performance and understood the influence of operating conditions on coefficient of performance."
     }
   ],
-
-  professional: [
-    {
-      id: 6,
-
-      title: "Professional UAV Projects",
-
-      company: "Magnum Wings",
-
-      status: "Ongoing",
-
-      description:
-        "Currently contributing to UAV product development involving CATIA V5 design, engineering drawings, BOM preparation, prototype assembly, subsystem integration, and manufacturing documentation. Additional public project details will be added as development progresses."
-    }
-  ]
 };
 
 export default projects;

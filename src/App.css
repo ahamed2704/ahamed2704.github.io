@@ -1,89 +1,239 @@
-*{
-
-    margin:0;
-
-    padding:0;
-
-    box-sizing:border-box;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-
-    scroll-behavior:smooth;
-
+html {
+  scroll-behavior: smooth;
+  background: #050b1c;
 }
 
-body{
-
-    font-family:"Poppins",sans-serif;
-
-    color:white;
-
-    overflow-x:hidden;
-
-    /* CHANGE ONLY THIS LINE TO CHANGE BACKGROUND */
-
-    background-image:url("/backgrounds/Gargantua.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-    background-attachment:fixed;
-
+body {
+  background: #050b1c;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
-/* Dark overlay so text remains readable */
-
-body::before{
-
-    content:"";
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(2,10,25,.55);
-
-    z-index:-1;
-
+button,
+a {
+  font-family: inherit;
 }
 
-.app{
+.app {
+  min-height: 100vh;
+  width: 100%;
 
-    min-height:100vh;
-
-    background:transparent;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(95, 168, 255, 0.045),
+      transparent 35%
+    ),
+    #050b1c;
 }
 
-.back-btn{
-
-    background:#5fa8ff;
-
-    color:white;
-
-    border:none;
-
-    padding:12px 20px;
-
-    border-radius:12px;
-
-    cursor:pointer;
-
-    margin-bottom:30px;
-
-    font-weight:600;
-
-    transition:.3s;
+main {
+  width: 100%;
 }
 
-.back-btn:hover{
 
-    background:#7ab8ff;
+/* =========================================================
+   MAIN SECTIONS
+   ========================================================= */
 
-    transform:translateY(-2px);
+.portfolio-section {
+  position: relative;
 
+  width: 100%;
+
+  /*
+    Sections now grow according to their content.
+    No forced 100vh height.
+  */
+  min-height: auto;
+
+  padding: 70px 0;
+
+  scroll-margin-top: 30px;
+}
+
+.dashboard-section {
+  min-height: auto;
+
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+
+/* =========================================================
+   SECTION DIVIDERS
+   ========================================================= */
+
+.portfolio-section:not(.dashboard-section)::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 85%;
+  max-width: 1200px;
+
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(95, 168, 255, 0.25),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   DASHBOARD BUTTON
+   ========================================================= */
+
+.back-btn {
+  background:
+    rgba(95, 168, 255, 0.08);
+
+  color: #ffffff;
+
+  border:
+    1px solid rgba(95, 168, 255, 0.3);
+
+  padding: 11px 20px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.back-btn:hover {
+  background:
+    rgba(95, 168, 255, 0.15);
+
+  border-color: #5fa8ff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 20px rgba(95, 168, 255, 0.12);
+}
+
+.back-btn:focus-visible {
+  outline:
+    2px solid #5fa8ff;
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-section {
+  min-height: auto;
+
+  padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.portfolio-footer {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 0 35px;
+}
+
+.footer-line {
+  width: 100%;
+  height: 1px;
+
+  margin-bottom: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(95, 168, 255, 0.25),
+      transparent
+    );
+}
+
+.footer-content {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #536074;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.footer-content span:first-child {
+  color: #5fa8ff;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .portfolio-section {
+    min-height: auto;
+
+    padding: 55px 0;
+  }
+
+  .dashboard-section {
+    padding-top: 15px;
+    padding-bottom: 60px;
+  }
+
+  .portfolio-section:not(.dashboard-section)::before {
+    width: 90%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 5px;
+  }
 }

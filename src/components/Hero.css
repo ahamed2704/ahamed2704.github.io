@@ -1,117 +1,185 @@
 .hero {
-
-    text-align: center;
-
-    padding: 70px 20px;
-
-    background: transparent;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 50px;
 }
 
 .hero-content {
-
-    max-width: 1200px;
-
-    margin: auto;
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-    font-style: oblique;
-
-    position: relative;
-
-    z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: oblique;
 }
 
 .hero-wing {
-
-    font-size: 3rem;
-
-    color: #5fa8ff;
-
-    margin-bottom: 20px;
-
-    text-shadow: 0 0 20px rgba(95,168,255,.5);
+  font-size: 3rem;
+  font-style: oblique;
+  color: #5fa8ff;
+  margin-bottom: 20px;
+  opacity: 0.9;
 }
 
 .hero h1 {
-
-    font-size: 5rem;
-
-    font-weight: 800;
-
-    line-height: 1.1;
-
-    margin-bottom: 20px;
-
-    background: linear-gradient(
-        90deg,
-        #ffffff,
-        #5fa8ff
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #5fa8ff
     );
-
-    -webkit-background-clip: text;
-
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    text-shadow: 0 0 40px rgba(95,168,255,.25);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero h2 {
-
-    color: #5fa8ff;
-
-    font-size: 2rem;
-
-    margin-bottom: 20px;
-
-    letter-spacing: 2px;
-
-    text-shadow: 0 0 15px rgba(95,168,255,.35);
+  color: #5fa8ff;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .hero p {
-
-    color: #d5dbe8;
-
-    font-size: 1.1rem;
-
-    letter-spacing: 1px;
-
-    line-height: 1.8;
-
-    max-width: 700px;
-
-    margin: auto;
-
-    text-shadow: 0 0 10px rgba(0,0,0,.6);
+  max-width: 900px;
+  margin: 0 auto;
+  color: #c4c9d4;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
 }
 
-@media (max-width:768px){
+/* Explore Portfolio button */
 
-    .hero{
+.hero-scroll {
+  margin: 55px auto 0;
 
-        padding:50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
-    }
+  width: fit-content;
+  min-width: 220px;
+  padding: 12px 24px;
 
-    .hero h1{
+  border: 1px solid transparent;
+  outline: none;
 
-        font-size:3rem;
+  background: transparent !important;
+  background-color: transparent !important;
 
-    }
+  color: rgba(196, 201, 212, 0.65);
 
-    .hero h2{
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 
-        font-size:1.5rem;
+  cursor: pointer;
 
-    }
+  appearance: none;
+  -webkit-appearance: none;
 
-    .hero p{
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
 
-        font-size:1rem;
+.hero-scroll:hover {
+  color: #ffffff;
 
-    }
+  border-color: rgba(95, 168, 255, 0.2);
+  background: rgba(95, 168, 255, 0.04) !important;
 
+  transform: translateY(-2px);
+}
+
+.hero-scroll:focus {
+  outline: none;
+}
+
+.hero-scroll:focus-visible {
+  outline: 2px solid rgba(95, 168, 255, 0.6);
+  outline-offset: 4px;
+}
+
+.hero-scroll-arrow {
+  display: block;
+
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #5fa8ff;
+
+  animation: scrollDown 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 80vh;
+    padding-top: 70px;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 75vh;
+    padding: 70px 20px 40px;
+  }
+
+  .hero-wing {
+    font-size: 2.3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-scroll {
+    margin-top: 40px;
+    min-width: 200px;
+  }
 }

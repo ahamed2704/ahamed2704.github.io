@@ -1,240 +1,299 @@
-.dashboard{
+.dashboard {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
 
-    width:90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-    max-width:1300px;
+  gap: 35px;
 
-    margin:auto;
+  justify-items: center;
 
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
-
-    justify-items:center;
-
-    padding-bottom:100px;
+  padding-bottom: 100px;
 }
 
-/* =========================================
-   GLASS CARD
-========================================= */
+.tech-card {
+  width: 320px;
+  height: 420px;
 
-.tech-card{
+  position: relative;
 
-    width:320px;
+  cursor: pointer;
 
-    height:420px;
+  overflow: hidden;
 
-    position:relative;
+  border-radius: 25px;
 
-    overflow:hidden;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(11, 22, 48, 0.72),
+      rgba(7, 16, 29, 0.72)
+    );
 
-    cursor:pointer;
+  border: 2px solid rgba(95, 168, 255, 0.2);
 
-    border-radius:28px;
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
 
-    /* MUCH LIGHTER GLASS */
+  display: flex;
+  flex-direction: column;
 
-    background:rgba(255,255,255,.001);
+  justify-content: center;
+  align-items: center;
 
-    backdrop-filter:blur(1px);
+  text-align: center;
 
-    -webkit-backdrop-filter:blur(1px);
+  color: white;
 
-    border:1px solid rgba(255,255,255,.12);
+  font-family: inherit;
 
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.12);
+  padding: 0;
 
-    transition:.35s ease;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-}
-
-/* Reflection */
-
-.tech-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-120px;
-
-    left:-80px;
-
-    width:220px;
-
-    height:220px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    filter:blur(40px);
-
-    pointer-events:none;
+  appearance: none;
 }
 
 /* Hover */
 
-.tech-card:hover{
+.tech-card:hover {
+  transform: translateY(-12px);
 
-    transform:
-        translateY(-12px)
-        scale(1.02);
+  border-color: pink;
 
-    background:rgba(255,255,255,.05);
+  box-shadow:
+    0 0 25px rgba(255, 192, 203, 0.45),
+    0 0 60px rgba(255, 192, 203, 0.18);
 
-    backdrop-filter:blur(6px);
-
-    -webkit-backdrop-filter:blur(6px);
-
-    border:1px solid rgba(95,168,255,.45);
-
-    box-shadow:
-        0 18px 35px rgba(95,168,255,.22);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 28, 58, 0.82),
+      rgba(8, 18, 34, 0.82)
+    );
 }
 
-/* Number */
+/* Click */
 
-.card-id{
-
-    position:absolute;
-
-    top:20px;
-
-    left:20px;
-
-    font-size:2rem;
-
-    font-weight:700;
-
-    color:#74b3ff;
-
-    z-index:3;
+.tech-card:active {
+  transform: translateY(-7px) scale(0.98);
 }
 
-.big-number{
+/* Keyboard accessibility */
 
-    position:absolute;
+.tech-card:focus-visible {
+  outline: 2px solid #5fa8ff;
 
-    top:80px;
+  outline-offset: 5px;
+}
 
-    font-size:8rem;
+/* Card ID */
 
-    font-weight:800;
+.card-id {
+  position: absolute;
 
-    color:rgba(255,255,255,.04);
+  top: 20px;
+  left: 20px;
 
-    user-select:none;
+  font-size: 2rem;
 
-    z-index:1;
+  font-weight: 700;
+
+  color: #5fa8ff;
+
+  z-index: 3;
+}
+
+/* Huge background number */
+
+.big-number {
+  position: absolute;
+
+  top: 70px;
+
+  font-size: 8rem;
+
+  font-weight: 800;
+
+  color: rgba(95, 168, 255, 0.08);
+
+  user-select: none;
+
+  pointer-events: none;
 }
 
 /* Icon */
 
-.card-icon{
+.card-icon {
+  font-size: 4rem;
 
-    font-size:4rem;
+  color: #5fa8ff;
 
-    color:#74b3ff;
+  z-index: 2;
 
-    margin-bottom:25px;
+  margin-bottom: 25px;
 
-    z-index:3;
-
-    transition:.35s;
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
 }
 
-.tech-card:hover .card-icon{
+.tech-card:hover .card-icon {
+  transform: scale(1.12);
 
-    transform:scale(1.08);
+  color: #ffffff;
 }
 
-/* Title */
+/* Heading */
 
-.tech-card h3{
+.tech-card h3 {
+  font-size: 2rem;
 
-    color:white;
+  color: white;
 
-    font-size:2rem;
+  margin-bottom: 15px;
 
-    margin-bottom:18px;
+  z-index: 2;
 
-    z-index:3;
-
-    text-shadow:0 2px 6px rgba(0,0,0,.35);
+  line-height: 1.2;
 }
 
-/* Subtitle */
+/* Description */
 
-.tech-card p{
+.tech-card p {
+  color: #c4c9d4;
 
-    color:#edf4ff;
+  line-height: 1.6;
 
-    line-height:1.6;
+  z-index: 2;
 
-    padding:0 25px;
+  padding: 0 25px;
 
-    z-index:3;
-
-    text-shadow:0 1px 4px rgba(0,0,0,.35);
+  margin: 0;
 }
 
-/* Border */
+/* Bottom arrow */
 
-.tech-card::after{
+.card-arrow {
+  position: absolute;
 
-    content:"";
+  bottom: 20px;
 
-    position:absolute;
+  right: 25px;
 
-    inset:0;
+  font-size: 1.5rem;
 
-    border-radius:28px;
+  color: rgba(95, 168, 255, 0.65);
 
-    border:1px solid rgba(255,255,255,.05);
-
-    pointer-events:none;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
-/* Responsive */
+.tech-card:hover .card-arrow {
+  transform: translateY(5px);
 
-@media(max-width:1100px){
-
-    .dashboard{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
+  color: pink;
 }
 
-@media(max-width:768px){
+/* Top-left technical corner */
 
-    .dashboard{
+.tech-card::before {
+  content: "";
 
-        grid-template-columns:1fr;
+  position: absolute;
 
-    }
+  top: 0;
+  left: 0;
 
-    .tech-card{
+  width: 70px;
+  height: 70px;
 
-        width:300px;
+  border-top: 2px solid #5fa8ff;
+  border-left: 2px solid #5fa8ff;
 
-        height:400px;
+  pointer-events: none;
+}
 
-    }
+/* Bottom-right technical corner */
 
+.tech-card::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+
+  width: 70px;
+  height: 70px;
+
+  border-bottom: 2px solid #5fa8ff;
+  border-right: 2px solid #5fa8ff;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+  .dashboard {
+    width: 92%;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .tech-card {
+    width: 300px;
+
+    max-width: 100%;
+
+    height: 400px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 400px) {
+  .tech-card {
+    width: 100%;
+
+    height: 380px;
+  }
+
+  .tech-card h3 {
+    font-size: 1.7rem;
+  }
+
+  .card-icon {
+    font-size: 3.5rem;
+  }
+
+  .big-number {
+    font-size: 7rem;
+  }
 }

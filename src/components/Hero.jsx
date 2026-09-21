@@ -1,6 +1,17 @@
 import "./Hero.css";
 
 function Hero() {
+  const scrollToDashboard = () => {
+    const dashboard = document.getElementById("dashboard");
+
+    if (dashboard) {
+      dashboard.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <section className="hero">
 
@@ -19,13 +30,23 @@ function Hero() {
         </h2>
 
         <p>
-          Mechanical Engineer with hands-on experience in UAV product development,
-          CAD modeling and engineering design using CATIA V5, Fusion 360 and
-          AutoCAD. Experienced in 3D modelling, assemblies, engineering drawings,
-          BOM preparation and prototype integration. Strong analytical and
-          problem-solving skills gained through enterprise application support at
-          Infosys, now applied to real-world mechanical product development.
+          Mechanical Engineer with hands-on experience in CAD modeling, mechanical design, assembly development, and surface modeling using CATIA V5, AutoCAD, and Fusion 360.
+          Currently involved in UAV product development, designing components and assemblies, preparing engineering drawings and BOMs, and supporting prototype and assembly activities.
         </p>
+
+        <button
+          className="hero-scroll"
+          onClick={scrollToDashboard}
+          type="button"
+        >
+          <span>
+            Explore Portfolio
+          </span>
+
+          <span className="hero-scroll-arrow">
+            ↓
+          </span>
+        </button>
 
       </div>
 

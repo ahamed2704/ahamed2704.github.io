@@ -6,150 +6,202 @@ function ProjectCard({ project }) {
 
   const specification = project.specification || {};
 
+  const toggleProject = () => {
+    setExpanded((current) => !current);
+  };
+
   return (
-    <div className="project-card">
+    <article
+      className={`project-card ${expanded ? "project-card-expanded" : ""}`}
+    >
 
-      {/* Header */}
+      {/* =========================
+          PROJECT HEADER
+          ========================= */}
 
-      <div
+      <button
         className="project-header"
-        onClick={() => setExpanded(!expanded)}
+        onClick={toggleProject}
+        type="button"
+        aria-expanded={expanded}
       >
 
-        <div>
+        <div className="project-header-content">
 
-          <h2>{project.title}</h2>
+          <div className="project-number">
+            {String(project.id).padStart(2, "0")}
+          </div>
 
-          <p className="project-click">
+          <div className="project-title-area">
 
-            {expanded ? "Hide Details ▲" : "View Details ▼"}
+            <h2>
+              {project.title}
+            </h2>
 
-          </p>
-
-        </div>
-
-      </div>
-
-      {/* Expanded Content */}
-
-      {expanded && (
-
-        <div className="project-body">
-
-          {/* Image */}
-
-          {project.image && (
-
-            <img
-              src={project.image}
-              alt={project.title}
-              className="project-image"
-            />
-
-          )}
-
-          {/* Project Specification */}
-
-          <div className="specification">
-
-            <h3>PROJECT SPECIFICATION</h3>
-
-            <div className="spec-grid">
-
-              {specification.software && (
-
-                <div className="spec-row">
-
-                  <span>CAD Software</span>
-
-                  <strong>{specification.software}</strong>
-
-                </div>
-
-              )}
-
-              {specification.projectType && (
-
-                <div className="spec-row">
-
-                  <span>Project Type</span>
-
-                  <strong>{specification.projectType}</strong>
-
-                </div>
-
-              )}
-
-              {specification.designApproach && (
-
-                <div className="spec-row">
-
-                  <span>Design Approach</span>
-
-                  <strong>{specification.designApproach}</strong>
-
-                </div>
-
-              )}
+            <div className="project-meta">
 
               {specification.domain && (
+                <span>
+                  {specification.domain}
+                </span>
+              )}
 
-                <div className="spec-row">
-
-                  <span>Engineering Domain</span>
-
-                  <strong>{specification.domain}</strong>
-
-                </div>
-
+              {specification.software && (
+                <span>
+                  {specification.software}
+                </span>
               )}
 
               {specification.status && (
-
-                <div className="spec-row">
-
-                  <span>Status</span>
-
-                  <strong>{specification.status}</strong>
-
-                </div>
-
+                <span>
+                  {specification.status}
+                </span>
               )}
 
             </div>
 
           </div>
 
-          {/* Overview */}
+        </div>
 
-          <section>
 
-            <h3>PROJECT OVERVIEW</h3>
+        {/* Expand indicator */}
 
-            <p>{project.overview}</p>
+        <div className="project-expand">
 
-          </section>
+          <span>
+            {expanded ? "CLOSE" : "VIEW"}
+          </span>
 
-          {/* CATIA */}
+          <span className="expand-icon">
+            {expanded ? "↑" : "↓"}
+          </span>
 
-          {project.workbenches && (
+        </div>
 
-            <section>
+      </button>
 
-              <h3>CATIA WORKBENCHES</h3>
 
-              <div className="tag-container">
+      {/* =========================
+          PROJECT DETAILS
+          ========================= */}
 
-                {project.workbenches.map((item, index) => (
+      {expanded && (
 
-                  <span
-                    className="tag"
-                    key={index}
-                  >
-                    {item}
-                  </span>
+        <div className="project-body">
 
-                ))}
+          {/* =========================
+              IMAGE
+              ========================= */}
+
+          {project.image && (
+
+            <div className="project-image-wrapper">
+
+              <img
+                src={project.image}
+                alt={`${project.title} project`}
+                className="project-image"
+              />
+
+            </div>
+
+          )}
+
+
+          {/* =========================
+              PROJECT SPECIFICATION
+              ========================= */}
+
+          {Object.keys(specification).length > 0 && (
+
+            <section className="project-detail-section">
+
+              <h3>
+                PROJECT SPECIFICATION
+              </h3>
+
+              <div className="spec-grid">
+
+                {specification.software && (
+
+                  <div className="spec-row">
+
+                    <span>
+                      CAD Software
+                    </span>
+
+                    <strong>
+                      {specification.software}
+                    </strong>
+
+                  </div>
+
+                )}
+
+                {specification.projectType && (
+
+                  <div className="spec-row">
+
+                    <span>
+                      Project Type
+                    </span>
+
+                    <strong>
+                      {specification.projectType}
+                    </strong>
+
+                  </div>
+
+                )}
+
+                {specification.designApproach && (
+
+                  <div className="spec-row">
+
+                    <span>
+                      Design Approach
+                    </span>
+
+                    <strong>
+                      {specification.designApproach}
+                    </strong>
+
+                  </div>
+
+                )}
+
+                {specification.domain && (
+
+                  <div className="spec-row">
+
+                    <span>
+                      Engineering Domain
+                    </span>
+
+                    <strong>
+                      {specification.domain}
+                    </strong>
+
+                  </div>
+
+                )}
+
+                {specification.status && (
+
+                  <div className="spec-row">
+
+                    <span>
+                      Status
+                    </span>
+
+                    <strong>
+                      {specification.status}
+                    </strong>
+
+                  </div>
+
+                )}
 
               </div>
 
@@ -157,130 +209,251 @@ function ProjectCard({ project }) {
 
           )}
 
-          {/* Features */}
 
-          {project.designFeatures && (
+          {/* =========================
+              OVERVIEW
+              ========================= */}
 
-            <section>
+          {project.overview && (
 
-              <h3>KEY DESIGN FEATURES</h3>
+            <section className="project-detail-section">
 
-              <ul>
+              <h3>
+                PROJECT OVERVIEW
+              </h3>
 
-                {project.designFeatures.map((item, index) => (
-
-                  <li key={index}>
-
-                    {item}
-
-                  </li>
-
-                ))}
-
-              </ul>
+              <p>
+                {project.overview}
+              </p>
 
             </section>
 
           )}
 
-          {/* Considerations */}
 
-          {project.designConsiderations && (
+          {/* =========================
+              CATIA WORKBENCHES
+              ========================= */}
 
-            <section>
+          {project.workbenches &&
+            project.workbenches.length > 0 && (
 
-              <h3>DESIGN CONSIDERATIONS</h3>
+              <section className="project-detail-section">
 
-              <ul>
+                <h3>
+                  CATIA WORKBENCHES
+                </h3>
 
-                {project.designConsiderations.map((item, index) => (
+                <div className="tag-container">
 
-                  <li key={index}>
+                  {project.workbenches.map(
+                    (item, index) => (
 
-                    {item}
+                      <span
+                        className="tag"
+                        key={index}
+                      >
+                        {item}
+                      </span>
 
-                  </li>
+                    )
+                  )}
 
-                ))}
+                </div>
 
-              </ul>
+              </section>
 
-            </section>
+            )}
 
-          )}
 
-          {/* Methodology */}
+          {/* =========================
+              DESIGN FEATURES
+              ========================= */}
 
-          {project.methodology && (
+          {project.designFeatures &&
+            project.designFeatures.length > 0 && (
 
-            <section>
+              <section className="project-detail-section">
 
-              <h3>METHODOLOGY</h3>
+                <h3>
+                  KEY DESIGN FEATURES
+                </h3>
 
-              <ul>
+                <ul>
 
-                {project.methodology.map((item, index) => (
+                  {project.designFeatures.map(
+                    (item, index) => (
 
-                  <li key={index}>
+                      <li key={index}>
+                        {item}
+                      </li>
 
-                    {item}
+                    )
+                  )}
 
-                  </li>
+                </ul>
 
-                ))}
+              </section>
 
-              </ul>
+            )}
 
-            </section>
 
-          )}
+          {/* =========================
+              DESIGN CONSIDERATIONS
+              ========================= */}
 
-          {/* Outcome */}
+          {project.designConsiderations &&
+            project.designConsiderations.length > 0 && (
+
+              <section className="project-detail-section">
+
+                <h3>
+                  DESIGN CONSIDERATIONS
+                </h3>
+
+                <ul>
+
+                  {project.designConsiderations.map(
+                    (item, index) => (
+
+                      <li key={index}>
+                        {item}
+                      </li>
+
+                    )
+                  )}
+
+                </ul>
+
+              </section>
+
+            )}
+
+
+          {/* =========================
+              ANALYSIS & VALIDATION
+              ========================= */}
+
+          {project.analysisAndValidation &&
+            project.analysisAndValidation.length > 0 && (
+
+              <section className="project-detail-section">
+
+                <h3>
+                  ANALYSIS & VALIDATION
+                </h3>
+
+                <ul>
+
+                  {project.analysisAndValidation.map(
+                    (item, index) => (
+
+                      <li key={index}>
+                        {item}
+                      </li>
+
+                    )
+                  )}
+
+                </ul>
+
+              </section>
+
+            )}
+
+
+          {/* =========================
+              METHODOLOGY
+              ========================= */}
+
+          {project.methodology &&
+            project.methodology.length > 0 && (
+
+              <section className="project-detail-section">
+
+                <h3>
+                  METHODOLOGY
+                </h3>
+
+                <ul>
+
+                  {project.methodology.map(
+                    (item, index) => (
+
+                      <li key={index}>
+                        {item}
+                      </li>
+
+                    )
+                  )}
+
+                </ul>
+
+              </section>
+
+            )}
+
+
+          {/* =========================
+              OUTCOME
+              ========================= */}
 
           {project.outcome && (
 
-            <section>
+            <section className="project-detail-section">
 
-              <h3>PROJECT OUTCOME</h3>
+              <h3>
+                PROJECT OUTCOME
+              </h3>
 
-              <p>{project.outcome}</p>
-
-            </section>
-
-          )}
-
-          {/* Skills */}
-
-          {project.skills && (
-
-            <section>
-
-              <h3>TECHNICAL SKILLS DEMONSTRATED</h3>
-
-              <div className="tag-container">
-
-                {project.skills.map((item, index) => (
-
-                  <span
-                    className="tag"
-                    key={index}
-                  >
-                    {item}
-                  </span>
-
-                ))}
-
-              </div>
+              <p>
+                {project.outcome}
+              </p>
 
             </section>
 
           )}
+
+
+          {/* =========================
+              TECHNICAL SKILLS
+              ========================= */}
+
+          {project.skills &&
+            project.skills.length > 0 && (
+
+              <section className="project-detail-section">
+
+                <h3>
+                  TECHNICAL SKILLS DEMONSTRATED
+                </h3>
+
+                <div className="tag-container">
+
+                  {project.skills.map(
+                    (item, index) => (
+
+                      <span
+                        className="tag"
+                        key={index}
+                      >
+                        {item}
+                      </span>
+
+                    )
+                  )}
+
+                </div>
+
+              </section>
+
+            )}
 
         </div>
 
       )}
 
-    </div>
+    </article>
   );
 }
 

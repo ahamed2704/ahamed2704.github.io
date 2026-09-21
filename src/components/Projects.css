@@ -1,286 +1,374 @@
-/* ===========================================
-   ENGINEERING PORTFOLIO
-=========================================== */
+.projects-page {
+  width: 90%;
+  max-width: 1250px;
 
-.projects-page{
+  margin: 0 auto;
 
-    width:90%;
-    max-width:1450px;
-
-    margin:auto;
-
-    padding:60px 0 120px;
+  padding: 20px 0 100px;
 }
 
-/* ===========================================
-   BACK BUTTON
-=========================================== */
 
-.back-btn{
-
-    background:#5fa8ff;
-
-    color:white;
-
-    border:none;
-
-    padding:12px 24px;
-
-    border-radius:12px;
-
-    cursor:pointer;
-
-    font-size:1rem;
-
-    font-weight:600;
-
-    margin-bottom:60px;
-
-    transition:.3s;
-}
-
-.back-btn:hover{
-
-    background:#7ab8ff;
-
-    transform:translateY(-2px);
-}
-
-/* ===========================================
+/* =========================
    HEADER
-=========================================== */
+   ========================= */
 
-.portfolio-header{
+.portfolio-header {
+  max-width: 950px;
 
-    text-align:center;
+  margin: 0 auto 60px;
 
-    margin-bottom:70px;
+  text-align: center;
 }
 
-.portfolio-label{
+.section-index {
+  margin-bottom: 12px;
 
-    color: pink;
+  color: #5fa8ff;
 
-    letter-spacing:3px;
+  font-size: 0.75rem;
 
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
 
-    font-size:.95rem;
-
-    font-weight:700;
-
-    margin-bottom:15px;
+  letter-spacing: 3px;
 }
 
-.portfolio-header h1{
+.portfolio-label {
+  margin-bottom: 20px;
 
-    color:white;
+  font-size: 4rem;
 
-    font-size:4rem;
+  font-weight: 800;
 
-    margin-bottom:20px;
+  letter-spacing: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #5fa8ff
+    );
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
 }
 
-.portfolio-description{
+.portfolio-description {
+  max-width: 850px;
 
-    max-width:850px;
+  margin: 0 auto;
 
-    margin:auto;
+  color: #b8c0ce;
 
-    color:#c9d3e3;
+  font-size: 1.05rem;
 
-    line-height:2;
-
-    font-size:1.08rem;
+  line-height: 1.8;
 }
 
-/* ===========================================
-   NAVIGATION
-=========================================== */
 
-.portfolio-navigation{
+/* =========================
+   PROJECT NAVIGATION
+   ========================= */
 
-    display:flex;
+.portfolio-navigation {
+  display: flex;
 
-    justify-content:center;
+  justify-content: center;
 
-    gap:25px;
+  align-items: center;
 
-    margin-bottom:90px;
+  gap: 12px;
 
-    flex-wrap:wrap;
+  margin-bottom: 90px;
+
+  flex-wrap: wrap;
 }
 
-.portfolio-navigation a{
+.portfolio-navigation button {
+  padding: 11px 20px;
 
-    text-decoration:none;
+  border-radius: 10px;
 
-    color:#dce5f4;
+  border: 1px solid rgba(95, 168, 255, 0.25);
 
-    padding:15px 32px;
+  background: rgba(95, 168, 255, 0.07);
 
-    border:1px solid rgba(95,168,255,.18);
+  color: #bfc7d5;
 
-    border-radius:12px;
+  font-size: 0.85rem;
 
-    background:rgba(255,255,255,.03);
+  font-weight: 600;
 
-    transition:.3s;
+  cursor: pointer;
 
-    font-weight:600;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.portfolio-navigation a:hover{
+.portfolio-navigation button:hover {
+  background: rgba(95, 168, 255, 0.16);
 
-    background:#5fa8ff;
+  border-color: #5fa8ff;
 
-    color:white;
+  color: white;
 
-    transform:translateY(-3px);
+  transform: translateY(-2px);
 }
 
-/* ===========================================
-   CATEGORY
-=========================================== */
 
-.project-category{
+/* =========================
+   PROJECT CATEGORY
+   ========================= */
 
-    margin-bottom:120px;
+.project-category {
+  margin-bottom: 120px;
+
+  scroll-margin-top: 100px;
 }
 
-.category-header{
+.category-header {
+  display: flex;
 
-    display:flex;
+  justify-content: space-between;
 
-    justify-content:space-between;
+  align-items: flex-end;
 
-    align-items:center;
+  gap: 30px;
 
-    margin-bottom:20px;
+  margin-bottom: 20px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid rgba(95, 168, 255, 0.18);
 }
 
-.category-header h2{
+.category-header > div {
+  display: flex;
 
-    color:white;
+  align-items: baseline;
 
-    font-size:2.3rem;
+  gap: 15px;
 }
 
-.category-header span{
+.category-number {
+  color: #5fa8ff;
 
-    color:#5fa8ff;
+  font-size: 0.8rem;
 
-    border:1px solid rgba(95,168,255,.25);
+  font-weight: 700;
 
-    padding:10px 18px;
-
-    border-radius:25px;
-
-    font-weight:600;
+  letter-spacing: 2px;
 }
 
-.category-description{
+.category-header h2 {
+  color: white;
 
-    color:#c5d1e1;
+  font-size: 2rem;
 
-    margin-bottom:45px;
-
-    line-height:1.9;
-
-    max-width:900px;
+  font-weight: 700;
 }
 
-/* ===========================================
-   PROFESSIONAL SECTION
-=========================================== */
+.project-count {
+  color: #7e899b;
 
-.professional-box{
+  font-size: 0.8rem;
 
-    background:rgba(255,255,255,.04);
+  font-weight: 600;
 
-    border:1px solid rgba(95,168,255,.15);
+  white-space: nowrap;
 
-    border-radius:22px;
-
-    padding:45px;
-
-    transition:.3s;
+  letter-spacing: 1px;
 }
 
-.professional-box:hover{
+.category-description {
+  max-width: 850px;
 
-    transform:translateY(-6px);
+  margin-bottom: 40px;
 
-    border-color:#5fa8ff;
+  color: #9fa8b8;
 
-    box-shadow:0 15px 40px rgba(95,168,255,.12);
+  line-height: 1.8;
 }
 
-.professional-box h3{
 
-    color:white;
+/* =========================
+   PROJECT LIST
+   ========================= */
 
-    font-size:2rem;
+.project-list {
+  width: 100%;
 
-    margin-bottom:10px;
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  column-gap: 30px;
+  row-gap: 30px;
 }
 
-.professional-box h4{
 
-    color:#5fa8ff;
+/* =========================
+   PROFESSIONAL PROJECT
+   ========================= */
 
-    margin-bottom:25px;
+.professional-project-box {
+  position: relative;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(11, 22, 48, 0.72),
+      rgba(7, 16, 29, 0.72)
+    );
+
+  border: 1px solid rgba(95, 168, 255, 0.25);
+
+  overflow: hidden;
 }
 
-.professional-box p{
+.professional-project-box::before {
+  content: "";
 
-    color:#d6ddeb;
+  position: absolute;
 
-    line-height:2;
+  top: 0;
+  left: 0;
+
+  width: 90px;
+  height: 3px;
+
+  background: #5fa8ff;
 }
 
-.status{
+.professional-status {
+  display: inline-block;
 
-    display:inline-block;
+  margin-bottom: 20px;
 
-    margin-top:35px;
+  padding: 6px 11px;
 
-    padding:10px 22px;
+  border-radius: 8px;
 
-    background:#5fa8ff;
+  background: rgba(95, 168, 255, 0.08);
 
-    color:white;
+  border: 1px solid rgba(95, 168, 255, 0.2);
 
-    border-radius:30px;
+  color: #7fbaff;
 
-    font-weight:600;
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
 }
 
-/* ===========================================
-   RESPONSIVE
-=========================================== */
+.professional-project-box h3 {
+  margin-bottom: 8px;
 
-@media(max-width:900px){
+  color: white;
 
-    .portfolio-header h1{
+  font-size: 1.7rem;
+}
 
-        font-size:2.8rem;
-    }
+.professional-project-box h4 {
+  margin-bottom: 18px;
 
-    .category-header{
+  color: #5fa8ff;
 
-        flex-direction:column;
+  font-size: 1rem;
+}
 
-        align-items:flex-start;
+.professional-project-box p {
+  color: #aeb7c7;
 
-        gap:18px;
-    }
+  line-height: 1.8;
+}
 
-    .portfolio-navigation{
 
-        flex-direction:column;
+/* =========================
+   BACK BUTTON
+   ========================= */
 
-        align-items:center;
-    }
+.projects-page .back-btn {
+  margin-bottom: 50px;
+}
 
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-label {
+    font-size: 3.2rem;
+  }
+
+  .category-header h2 {
+    font-size: 1.7rem;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+  .projects-page {
+    width: 92%;
+  }
+
+  .portfolio-label {
+    font-size: 2.5rem;
+
+    letter-spacing: 2px;
+  }
+
+  .portfolio-description {
+    font-size: 0.95rem;
+  }
+
+  .portfolio-navigation {
+    margin-bottom: 60px;
+  }
+
+  .category-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .category-header > div {
+    align-items: center;
+  }
+
+  .category-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-category {
+    margin-bottom: 80px;
+  }
+
+  .professional-project-box {
+    padding: 25px;
+  }
 }

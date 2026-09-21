@@ -1,61 +1,139 @@
 import "./Skills.css";
 
 function Skills({ setActiveSection }) {
+  const skillGroups = [
+    {
+      number: "01",
+      title: "CAD & Product Design",
+      description:
+        "Computer-aided design and product development capabilities focused on mechanical components, assemblies and engineering documentation.",
+      skills: [
+        "CATIA V5",
+        "Fusion 360",
+        "AutoCAD",
+        "3D Modelling",
+        "Assembly Design",
+        "Surface Design",
+        "Parametric Design",
+        "Engineering Drawings",
+      ],
+    },
+    {
+      number: "02",
+      title: "Analysis & Engineering",
+      description:
+        "Engineering fundamentals and simulation exposure supporting structural and mechanical design decisions.",
+      skills: [
+        "ANSYS",
+        "FEA",
+        "CFD",
+        "Engineering Mechanics",
+        "Strength of Materials",
+        "Machine Design",
+        "Engineering Analysis",
+      ],
+    },
+    {
+      number: "03",
+      title: "Manufacturing & Development",
+      description:
+        "Practical understanding of manufacturing processes, engineering documentation and product development workflows.",
+      skills: [
+        "Manufacturing Processes",
+        "Composite Materials",
+        "Engineering Documentation",
+        "BOM Preparation",
+        "Design for Manufacturing",
+        "Product Development",
+        "Assembly Development",
+      ],
+    },
+    {
+      number: "04",
+      title: "Programming & Technical Tools",
+      description:
+        "Supporting technical tools used for engineering workflows, data handling and computational tasks.",
+      skills: [
+        "Python",
+        "SQL",
+        "Linux",
+        "Technical Documentation",
+        "Data Analysis",
+      ],
+    },
+  ];
+
+  const scrollToDashboard = () => {
+    const dashboard = document.getElementById("dashboard");
+
+    if (dashboard) {
+      dashboard.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   return (
-
     <section className="skills-section">
-
       <button
         className="back-btn"
-        onClick={() => setActiveSection(null)}
+        onClick={scrollToDashboard}
+        type="button"
       >
-        ← Dashboard
+        ↑ Dashboard
       </button>
 
-      <h1>Skills</h1>
+      <div className="skills-header">
+        <span className="section-index">
+          03 / CAPABILITIES
+        </span>
 
-      <div className="skills-grid">
+        <h1>Technical Skills</h1>
 
-        <div className="skill-card">
-
-          <h3>CAD Design & Tools</h3>
-
-          <div className="skill-tags">
-            <span>CATIA V5</span>
-            <span>Fusion 360</span>
-            <span>AutoCAD</span>
-          </div>
-
-        </div>
-
-        <div className="skill-card">
-
-          <h3>Mechanical Design</h3>
-
-          <div className="skill-tags">
-            <span>3D Modelling</span>
-            <span>Surface Modelling</span>
-            <span>Engineering Drafting</span>
-            <span>BOM Preparation</span>
-          </div>
-
-        </div>
-
-        <div className="skill-card">
-
-          <h3>Technical Exposure</h3>
-
-          <div className="skill-tags">
-            <span>Linux</span>
-            <span>Python</span>
-            <span>SQL</span>
-          </div>
-
-        </div>
-
+        <p>
+          A combination of CAD design, mechanical engineering,
+          analysis, manufacturing knowledge and technical tools
+          developed through academic projects and professional
+          experience.
+        </p>
       </div>
 
+      <div className="skills-grid">
+        {skillGroups.map((group) => (
+          <article
+            className="skill-group"
+            key={group.number}
+          >
+            <div className="skill-group-top">
+              <span className="skill-number">
+                {group.number}
+              </span>
+
+              <span className="skill-line" />
+            </div>
+
+            <h2>{group.title}</h2>
+
+            <p className="skill-description">
+              {group.description}
+            </p>
+
+            <div className="skill-list">
+              {group.skills.map((skill) => (
+                <div
+                  className="skill-item"
+                  key={skill}
+                >
+                  <span className="skill-dot" />
+
+                  <span>{skill}</span>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }

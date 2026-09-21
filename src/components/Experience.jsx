@@ -3,19 +3,21 @@ import "./Experience.css";
 function Experience({ setActiveSection }) {
   const experiences = [
     {
+      number: "01",
       icon: "✈️",
       company: "Magnumwings",
       role: "Junior Mechanical Engineer",
       duration: "Mar 2026 – Present",
 
       responsibilities: [
-        "Designing and modified UAV components using CATIA V5.",
-        "Preparing engineering drawings, BOMs and manufacturing documentation.",
-        "Supporting UAV prototype assembly and subsystem integration.",
-      ]
+        "Designed and modified UAV components using CATIA V5.",
+        "Prepared engineering drawings, BOMs and manufacturing documentation.",
+        "Supported UAV prototype assembly and subsystem integration.",
+      ],
     },
 
     {
+      number: "02",
       icon: "📐",
       company: "AIMES IT & HEALTH CARE",
       role: "CAD Design Engineer",
@@ -25,11 +27,12 @@ function Experience({ setActiveSection }) {
         "Executed 5+ engineering CAD projects using AutoCAD.",
         "Developed detailed 2D engineering drawings.",
         "Prepared technical documentation and drawing revisions.",
-        "Maintained dimensional accuracy and manufacturing compliance."
-      ]
+        "Maintained dimensional accuracy and manufacturing compliance.",
+      ],
     },
 
     {
+      number: "03",
       icon: "💻",
       company: "Infosys Ltd.",
       role: "Systems Engineer",
@@ -38,53 +41,121 @@ function Experience({ setActiveSection }) {
       responsibilities: [
         "Supported Oracle Banking production applications.",
         "Performed incident analysis and production troubleshooting.",
-        "Worked in SLA-driven production support environment.",
-        "Maintained documentation and deployment quality."
-      ]
-    }
+        "Worked in an SLA-driven production support environment.",
+        "Maintained documentation and deployment quality.",
+      ],
+    },
   ];
 
   return (
     <section className="experience-section">
 
+      {/* =========================
+          BACK TO DASHBOARD
+          ========================= */}
+
       <button
         className="back-btn"
-        onClick={() => setActiveSection(null)}
+        onClick={() => setActiveSection("dashboard")}
+        type="button"
       >
-        ← Dashboard
+        ↑ Dashboard
       </button>
 
-      <h1>Professional Experience</h1>
 
-      <div className="experience-grid">
+      {/* =========================
+          HEADER
+          ========================= */}
 
-        {experiences.map((exp, index) => (
+      <div className="experience-header">
 
-          <div className="experience-card" key={index}>
+        <span className="section-index">
+          01 / CAREER
+        </span>
 
-            <div className="exp-icon">
-              {exp.icon}
+        <h1>
+          Professional Experience
+        </h1>
+
+        <p>
+          Professional experience across mechanical design,
+          CAD development, UAV product development and
+          technical production support.
+        </p>
+
+      </div>
+
+
+      {/* =========================
+          EXPERIENCE TIMELINE
+          ========================= */}
+
+      <div className="experience-timeline">
+
+        {experiences.map((exp) => (
+
+          <article
+            className="experience-card"
+            key={exp.number}
+          >
+
+            {/* Timeline indicator */}
+
+            <div className="timeline-marker">
+
+              <span>
+                {exp.number}
+              </span>
+
             </div>
 
-            <h2>{exp.company}</h2>
 
-            <h3>{exp.role}</h3>
+            {/* Card */}
 
-            <span className="duration">
-              {exp.duration}
-            </span>
+            <div className="experience-card-content">
 
-            <ul className="responsibilities">
+              <div className="experience-top">
 
-              {exp.responsibilities.map((item, i) => (
+                <div className="exp-icon">
+                  {exp.icon}
+                </div>
 
-                <li key={i}>{item}</li>
+                <span className="duration">
+                  {exp.duration}
+                </span>
 
-              ))}
+              </div>
 
-            </ul>
 
-          </div>
+              <h2>
+                {exp.company}
+              </h2>
+
+              <h3>
+                {exp.role}
+              </h3>
+
+
+              <div className="experience-divider" />
+
+
+              <ul className="responsibilities">
+
+                {exp.responsibilities.map(
+                  (item, index) => (
+
+                    <li key={index}>
+                      {item}
+                    </li>
+
+                  )
+                )}
+
+              </ul>
+
+            </div>
+
+          </article>
 
         ))}
 
