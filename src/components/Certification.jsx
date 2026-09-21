@@ -5,43 +5,13 @@ function Certification({ setActiveSection }) {
     {
       number: "01",
       title: "CATIA V5",
-      category: "CAD / PRODUCT DESIGN",
+      /*category: "CAD / PRODUCT DESIGN",*/
       description:
-        "Training and practical application of CATIA V5 for mechanical part modelling, surface design, assembly development and engineering design workflows.",
+        "3DEXPERIENCE - Mechanical Designer at the level of PROFESSIONAL",
       skills: [
         "Part Design",
-        "Generative Shape Design",
-        "Assembly Design",
         "3D Modelling",
         "Engineering Drawings",
-      ],
-    },
-
-    {
-      number: "02",
-      title: "Fusion 360",
-      category: "CAD / MECHANICAL DESIGN",
-      description:
-        "CAD modelling and mechanical product development using Autodesk Fusion 360, including component modelling and assembly-oriented design.",
-      skills: [
-        "3D Modelling",
-        "Mechanical Design",
-        "Parametric CAD",
-        "Assembly Development",
-      ],
-    },
-
-    {
-      number: "03",
-      title: "AutoCAD",
-      category: "CAD / ENGINEERING DRAWING",
-      description:
-        "Engineering drafting and technical drawing development using AutoCAD for detailed 2D mechanical documentation.",
-      skills: [
-        "2D Drafting",
-        "Engineering Drawings",
-        "Dimensioning",
-        "Technical Documentation",
       ],
     },
   ];
@@ -150,20 +120,6 @@ function Certification({ setActiveSection }) {
 
             </div>
 
-
-            {/* Bottom line */}
-
-            <div className="certification-footer">
-
-              <span>
-                CAD / ENGINEERING
-              </span>
-
-              <span>
-                VERIFIED SKILLS
-              </span>
-
-            </div>
 
           </article>
 
